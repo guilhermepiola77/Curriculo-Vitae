@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Consumo</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Consumo</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="dicas.html">Dicas de Viagem</a></li>
+                <li><a href="historico.html">Histórico de Despesas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="calculadora-consumo">
+            <h2>Calcular Média de Consumo</h2>
+            <form id="form-calculadora">
+                <div>
+                    <label for="distancia">Distância percorrida (km):</label>
+                    <input type="number" id="distancia" required>
+                </div>
+                <div>
+                    <label for="combustivel">Combustível gasto (litros):</label>
+                    <input type="number" id="combustivel" required>
+                </div>
+                <button type="button" onclick="calcularConsumo()">Calcular</button>
+            </form>
+            <div id="resultado-consumo" class="resultado"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Controle de Despesas de Viagem</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

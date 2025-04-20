@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações CRUD</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Operações CRUD</h1>
+        <div id="input-container">
+            <input type="text" name="player-input" id="player-input" 
+                placeholder="Digite o nome do jogador">
+            <input type="text" name="xp-input" id="xp-input" 
+                placeholder="Digite a quantidade de XP">
+            <button id="add-btn">Adicionar</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Player</th>
+                    <th>XP</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+        <div id="update-container">
+        <input type="text" name="update-player-input" id="update-player-input">
+            <input type="text" name="update-xp-input" id="update-xp-input">
+            <button id="update-btn">Atualizar</button>
+            <button id="cancel-btn">Cancelar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

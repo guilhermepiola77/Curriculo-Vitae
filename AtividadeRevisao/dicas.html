@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas de Viagem</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Dicas de Viagem</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="calculadora.html">Calculadora de Consumo</a></li>
+                <li><a href="historico.html">Histórico de Despesas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="cadastro-dicas">
+            <h2>Cadastrar Nova Dica</h2>
+            <form id="form-dica">
+                <div>
+                    <label for="titulo-dica">Título:</label>
+                    <input type="text" id="titulo-dica" required>
+                </div>
+                <div>
+                    <label for="descricao-dica">Descrição:</label>
+                    <textarea id="descricao-dica" rows="4" required></textarea>
+                </div>
+                <button type="button" onclick="salvarDica()">Salvar Dica</button>
+            </form>
+        </section>
+
+        <section id="lista-dicas">
+            <h2>Dicas Cadastradas</h2>
+            <ul id="dicas-salvas">
+                </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Controle de Despesas de Viagem</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

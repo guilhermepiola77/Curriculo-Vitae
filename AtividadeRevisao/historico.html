@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Despesas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Histórico de Despesas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="calculadora.html">Calculadora de Consumo</a></li>
+                <li><a href="dicas.html">Dicas de Viagem</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="cadastro-despesa">
+            <h2>Cadastrar Nova Despesa</h2>
+            <form id="form-despesa">
+                <div>
+                    <label for="data-despesa">Data:</label>
+                    <input type="date" id="data-despesa" required>
+                </div>
+                <div>
+                    <label for="descricao-despesa">Descrição:</label>
+                    <input type="text" id="descricao-despesa" required>
+                </div>
+                <div>
+                    <label for="valor-despesa">Valor (R$):</label>
+                    <input type="number" id="valor-despesa" step="0.01" required>
+                </div>
+                <div>
+                    <label for="tipo-despesa">Tipo:</label>
+                    <select id="tipo-despesa">
+                        <option value="combustivel">Combustível</option>
+                        <option value="pedagio">Pedágio</option>
+                        <option value="alimentacao">Alimentação</option>
+                        <option value="hospedagem">Hospedagem</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <button type="button" onclick="salvarDespesa()">Salvar Despesa</button>
+            </form>
+        </section>
+
+        <section id="relatorio-despesas">
+            <h2>Relatório de Despesas</h2>
+            <div id="lista-despesas">
+                <p>Nenhuma despesa cadastrada ainda.</p>
+            </div>
+            <div id="total-despesa" class="resultado"></div>
+            <button type="button" onclick="gerarRelatorioPDF()">Exportar para PDF</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Controle de Despesas de Viagem</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>

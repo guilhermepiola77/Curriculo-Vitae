@@ -1,0 +1,58 @@
+<!--Validações que foram implementadas e testes realizados:
+# Os campos (nome, valor e tipo de seguro) são obrigatórios.
+# O valor da apólice precisa ser um número válido e positivo (zero ou maior).
+# Foi realizado uma sugestão no campo de tipo de seguro para aceitar entradas como 
+"Vida", "Veículo" e "Residência", por mais que o campo permita qualquer mensagem, mas foi abreviada
+para que o usuário utilize apartir do que foi mostrado nos parenteses.
+#Foi feitas validações são realizadas tanto na inserção quanto na edição das apólices, caso algum 
+campo esteja incorreto ou em branco, um alerta é exibido ao usuário.
+
+Foram realizados testes manuais inserindo diferentes combinações válidas e inválidas dos dados.
+# Foi testado adicionar uma nova apólice com dados válidos e inválidos.
+# Editado uma apólice com valores incorretos.
+# Excluir apólices.
+# Atualizado o navegador para verificar se os dados permaneceriam corretamente via localStorage. -->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestor de Apólices de Seguros</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Gestor de Apólices de Seguros</h1>
+
+    <div id="input-container">
+      <input type="text" id="nome-input" placeholder="Nome do Segurado">
+      <input type="number" id="valor-input" placeholder="Valor da Apólice (R$)" min="0" step="0.01">
+      <input type="text" id="tipo-input" placeholder="Tipo de Seguro (Vida, Veículo, etc)">
+      <button id="add-btn">Adicionar</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Valor (R$)</th>
+          <th>Tipo</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+
+    <div id="update-container">
+      <input type="text" id="update-nome-input">
+      <input type="number" id="update-valor-input" min="0" step="0.01">
+      <input type="text" id="update-tipo-input">
+      <button id="update-btn">Atualizar</button>
+      <button id="cancel-btn">Cancelar</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
